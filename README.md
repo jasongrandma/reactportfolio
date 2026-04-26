@@ -90,6 +90,24 @@ npm run start
 - Press `a` for Android
 - Press `i` for iOS (macOS only)
 
+## GitHub Pages Deployment
+
+This project is configured to deploy from the `main` branch using GitHub Actions.
+
+### What is configured
+
+- Static web output via Expo Router
+- GitHub Pages base path set to `/reactportfolio`
+- Deployment workflow in [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml)
+- `.nojekyll` marker added during the build so Expo's underscore-prefixed assets are served correctly
+
+### How to publish
+
+1. Push your changes to `main`.
+2. Open the repository on GitHub.
+3. In the repository settings, make sure GitHub Pages is set to use GitHub Actions if prompted.
+4. After the workflow finishes, your site will be available at the repository Pages URL.
+
 ## Scripts
 
 - `npm run start` start Expo dev server
@@ -102,3 +120,4 @@ npm run start
 
 - Image content is sourced from local `assets/images` project folders.
 - Portfolio text and project metadata are editable in `data/portfolioData.ts`.
+- If your repository name changes, update the `baseUrl` value in [app.json](app.json).
