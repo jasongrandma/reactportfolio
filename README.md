@@ -1,17 +1,17 @@
 # Jason Granias Portfolio (Expo + React Native)
 
-A responsive personal portfolio built with Expo and React Native, designed to mirror the existing visual style while improving structure and interactivity.
+A responsive personal portfolio built with Expo and React Native. The app is organized as a multi-page experience with dedicated Home, About, Projects, and Contact screens.
 
 ## Overview
 
-This project is a single-page portfolio with four required sections:
+This project is a multi-page portfolio with four required pages:
 
 - Home
 - About
 - Projects
 - Contact
 
-It includes reusable components, image-driven project showcases, section navigation, smooth scrolling, and a validated contact form.
+It includes reusable components, image-driven project showcases, navigation, animations, and a validated contact form.
 
 ## Tech Stack
 
@@ -23,39 +23,51 @@ It includes reusable components, image-driven project showcases, section navigat
 
 ## Features
 
-- Recreated portfolio design language with a consistent color and typography system
-- Persistent top navbar for section navigation
-- Persistent footer with social links and back-to-top action
-- Project showcase using local assets from labeled image folders
-- Contact section with input validation for name, email, and message
-- Spring-based section and project card animations
-- Responsive behavior for web, tablet, and mobile layouts
+- Multi-page routing with Expo Router
+- Persistent top navbar and footer across all pages
+- Home hero with semi-transparent background image and welcome text
+- About page with bio, basic skills, interests, and social links
+- Projects page with at least three projects, descriptions, and images from local folders
+- Contact page with social details and validated contact form
+- Spring-based reveal animations for key sections
+- Responsive layout behavior for web, tablet, and mobile
+
+## Requirement Checklist
+
+- Expo project setup and clear folder structure: complete
+- Required pages and shared components: complete
+- Styled-components for UI styling and consistent theme: complete
+- Responsiveness across desktop, tablet, mobile: complete
+- Form validation in contact form: complete
+- Animations using React Spring: complete
+- Git/GitHub workflow: expected externally via repository history
 
 ## Project Structure
 
 ```text
 app/
-   _layout.tsx
-   index.tsx
+  _layout.tsx
+  index.tsx
+  about.tsx
+  projects.tsx
+  contact.tsx
 
 components/
-   contact/
-      contact-form.tsx
-   layout/
-      portfolio-footer.tsx
-      portfolio-navbar.tsx
-   projects/
-      project-card.tsx
+  contact/
+    contact-form.tsx
+  layout/
+    site-nav.tsx
+    portfolio-footer.tsx
 
 data/
-   portfolioData.ts
+  portfolioData.ts
 
 styles/
-   portfolioTheme.ts
+  portfolioTheme.ts
 
 assets/
-   images/
-   reference/
+  images/
+  reference/
 ```
 
 ## Setup
@@ -88,5 +100,5 @@ npm run start
 
 ## Notes
 
-- Image content is sourced from the local `assets/images` folders.
-- Social links are editable in `data/portfolioData.ts`.
+- Image content is sourced from local `assets/images` project folders.
+- Portfolio text and project metadata are editable in `data/portfolioData.ts`.

@@ -104,9 +104,9 @@ export default function AboutScreen() {
                             <Bio compact={compact}>{portfolioIdentity.about}</Bio>
                             <SkillsHeading>Skills</SkillsHeading>
                             <SkillsWrap>
-                              {portfolioIdentity.skills.map((skill) => (
-                                <SkillChip key={skill}>{skill}</SkillChip>
-                              ))}
+                                {portfolioIdentity.skills.map((skill) => (
+                                    <SkillChip key={skill}>{skill}</SkillChip>
+                                ))}
                             </SkillsWrap>
                             <ContactHeading>Contact & Socials</ContactHeading>
                             <Email>{portfolioIdentity.email}</Email>

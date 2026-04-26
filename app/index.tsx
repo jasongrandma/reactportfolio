@@ -158,23 +158,23 @@ export default function HomeScreen() {
             <ScrollView ref={scrollRef} style={{ flex: 1 }}>
                 <Screen>
                     <Hero>
-                    <HeroBackdrop
-                      source={require('@/assets/images/darkbluestormcloudswallpaper.jpg')}
-                      contentFit="cover"
-                    />
-                    <HeroContent>
-                      <AnimatedView style={{ opacity: heroAnim.opacity, transform: [{ translateY: heroAnim.y }] }}>
-                        <Name>Jason Granias</Name>
-                        <Role>Digital Designer</Role>
-                        <Intro>
-                          Creating is the source of my creativity and passion. I am interested in design to
-                          consider every perspective in a work through emotional resonance.
-                        </Intro>
-                        <Pressable onPress={() => scrollRef.current?.scrollTo({ y: 760, animated: true })}>
-                          <Curiosity>See where my curiosity has brought me.</Curiosity>
-                        </Pressable>
-                      </AnimatedView>
-                    </HeroContent>
+                        <HeroBackdrop
+                            source={require('@/assets/images/darkbluestormcloudswallpaper.jpg')}
+                            contentFit="cover"
+                        />
+                        <HeroContent>
+                            <AnimatedView style={{ opacity: heroAnim.opacity, transform: [{ translateY: heroAnim.y }] }}>
+                                <Name>Jason Granias</Name>
+                                <Role>Digital Designer</Role>
+                                <Intro>
+                                    Creating is the source of my creativity and passion. I am interested in design to
+                                    consider every perspective in a work through emotional resonance.
+                                </Intro>
+                                <Pressable onPress={() => scrollRef.current?.scrollTo({ y: 760, animated: true })}>
+                                    <Curiosity>See where my curiosity has brought me.</Curiosity>
+                                </Pressable>
+                            </AnimatedView>
+                        </HeroContent>
                     </Hero>
 
                     <ProjectStrip>
